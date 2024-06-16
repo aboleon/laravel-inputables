@@ -1,0 +1,65 @@
+{
+    "name": "aboleon/laravel-inputables",
+    "description": "Utility form tags component collection for Laravel Blade",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "laravel",
+        "blade",
+        "form tags",
+        "datepicker",
+        "input",
+        "select",
+        "textarea"
+    ],
+    "authors": [
+        {
+            "name": "Aboleon Media",
+            "email": "dev@aboleon.media"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0",
+        "illuminate/contracts": "^11.0",
+        "illuminate/view": "^11.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.1",
+        "orchestra/testbench": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aboleon\\Inputables\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aboleon\\Inputables\\ServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php vendor/bin/testbench package:discover --ansi"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../laravel-inputables"
+        }
+    ]
+}
